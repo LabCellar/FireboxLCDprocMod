@@ -1,0 +1,73 @@
+menuitem.o: menuitem.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/ctype.h /usr/include/_ctype.h /usr/include/runetype.h \
+  /usr/include/xlocale/_ctype.h /usr/include/assert.h \
+  /usr/include/stdio.h ../shared/report.h ../shared/defines.h widget.h \
+  screen.h ../shared/LL.h client.h menuitem.h ../config.h \
+  /usr/include/stdbool.h menu.h drivers.h drivers/lcd.h \
+  /usr/include/stddef.h sock.h ../shared/sockets.h
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/ctype.h:
+
+/usr/include/_ctype.h:
+
+/usr/include/runetype.h:
+
+/usr/include/xlocale/_ctype.h:
+
+/usr/include/assert.h:
+
+/usr/include/stdio.h:
+
+../shared/report.h:
+
+../shared/defines.h:
+
+widget.h:
+
+screen.h:
+
+../shared/LL.h:
+
+client.h:
+
+menuitem.h:
+
+../config.h:
+
+/usr/include/stdbool.h:
+
+menu.h:
+
+drivers.h:
+
+drivers/lcd.h:
+
+/usr/include/stddef.h:
+
+sock.h:
+
+../shared/sockets.h:

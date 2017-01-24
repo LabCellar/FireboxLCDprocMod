@@ -1,0 +1,80 @@
+hd44780-hd44780-ext8bit.o: hd44780-ext8bit.c hd44780-ext8bit.h lcd.h \
+  /usr/include/stddef.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h hd44780-low.h \
+  ../../config.h /usr/include/sys/time.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/types.h /usr/include/machine/endian.h \
+  /usr/include/x86/endian.h /usr/include/sys/_pthreadtypes.h \
+  /usr/include/sys/_stdint.h /usr/include/sys/select.h \
+  /usr/include/sys/_sigset.h /usr/include/sys/timespec.h \
+  /usr/include/sys/_timespec.h /usr/include/time.h \
+  /usr/include/xlocale/_time.h lpt-port.h port.h /usr/include/stdio.h \
+  lcd_sem.h report.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/errno.h
+
+hd44780-ext8bit.h:
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+hd44780-low.h:
+
+../../config.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/time.h:
+
+/usr/include/xlocale/_time.h:
+
+lpt-port.h:
+
+port.h:
+
+/usr/include/stdio.h:
+
+lcd_sem.h:
+
+report.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/errno.h:

@@ -1,0 +1,70 @@
+input.o: input.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/stdio.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  ../shared/sockets.h ../config.h ../shared/report.h \
+  ../shared/configfile.h ../shared/LL.h drivers.h drivers/lcd.h \
+  /usr/include/stddef.h client.h screen.h screenlist.h \
+  /usr/include/stdbool.h ../shared/defines.h menuscreens.h menu.h \
+  menuitem.h widget.h input.h render.h
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/stdio.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+../shared/sockets.h:
+
+../config.h:
+
+../shared/report.h:
+
+../shared/configfile.h:
+
+../shared/LL.h:
+
+drivers.h:
+
+drivers/lcd.h:
+
+/usr/include/stddef.h:
+
+client.h:
+
+screen.h:
+
+screenlist.h:
+
+/usr/include/stdbool.h:
+
+../shared/defines.h:
+
+menuscreens.h:
+
+menu.h:
+
+menuitem.h:
+
+widget.h:
+
+input.h:
+
+render.h:

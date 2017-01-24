@@ -1,0 +1,161 @@
+main.o: main.c ../config.h /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/stdio.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/signal.h /usr/include/sys/signal.h \
+  /usr/include/sys/_sigset.h /usr/include/machine/_limits.h \
+  /usr/include/x86/_limits.h /usr/include/machine/signal.h \
+  /usr/include/x86/signal.h /usr/include/machine/trap.h \
+  /usr/include/x86/trap.h /usr/include/unistd.h /usr/include/sys/types.h \
+  /usr/include/machine/endian.h /usr/include/x86/endian.h \
+  /usr/include/sys/_pthreadtypes.h /usr/include/sys/_stdint.h \
+  /usr/include/sys/select.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/timespec.h /usr/include/sys/_timespec.h \
+  /usr/include/sys/unistd.h /usr/include/pwd.h /usr/include/sys/wait.h \
+  /usr/include/errno.h /usr/include/math.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/xlocale/_time.h /usr/include/fcntl.h \
+  /usr/include/limits.h /usr/include/sys/limits.h \
+  /usr/include/sys/syslimits.h ../shared/getopt.h ../shared/report.h \
+  ../shared/defines.h drivers.h drivers/lcd.h /usr/include/stddef.h \
+  ../shared/LL.h sock.h ../shared/sockets.h client.h clients.h screen.h \
+  widget.h screenlist.h /usr/include/stdbool.h parse.h render.h \
+  serverscreens.h menuscreens.h menu.h menuitem.h input.h \
+  ../shared/configfile.h main.h
+
+../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/stdio.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/machine/_limits.h:
+
+/usr/include/x86/_limits.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/x86/signal.h:
+
+/usr/include/machine/trap.h:
+
+/usr/include/x86/trap.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/pwd.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/errno.h:
+
+/usr/include/math.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/xlocale/_time.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/limits.h:
+
+/usr/include/sys/limits.h:
+
+/usr/include/sys/syslimits.h:
+
+../shared/getopt.h:
+
+../shared/report.h:
+
+../shared/defines.h:
+
+drivers.h:
+
+drivers/lcd.h:
+
+/usr/include/stddef.h:
+
+../shared/LL.h:
+
+sock.h:
+
+../shared/sockets.h:
+
+client.h:
+
+clients.h:
+
+screen.h:
+
+widget.h:
+
+screenlist.h:
+
+/usr/include/stdbool.h:
+
+parse.h:
+
+render.h:
+
+serverscreens.h:
+
+menuscreens.h:
+
+menu.h:
+
+menuitem.h:
+
+input.h:
+
+../shared/configfile.h:
+
+main.h:

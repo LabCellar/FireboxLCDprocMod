@@ -1,0 +1,102 @@
+client_commands.o: client_commands.c /usr/include/unistd.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/types.h \
+  /usr/include/machine/endian.h /usr/include/x86/endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/sys/_pthreadtypes.h \
+  /usr/include/sys/_stdint.h /usr/include/sys/select.h \
+  /usr/include/sys/_sigset.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/timespec.h /usr/include/sys/_timespec.h \
+  /usr/include/sys/unistd.h /usr/include/sys/_null.h \
+  /usr/include/stdlib.h /usr/include/stdio.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/xlocale/_strings.h \
+  /usr/include/xlocale/_string.h /usr/include/ctype.h \
+  /usr/include/_ctype.h /usr/include/runetype.h \
+  /usr/include/xlocale/_ctype.h /usr/include/errno.h \
+  ../../shared/report.h ../../shared/sockets.h ../../config.h \
+  ../drivers.h ../drivers/lcd.h /usr/include/stddef.h ../../shared/LL.h \
+  ../client.h ../screen.h ../render.h ../input.h /usr/include/stdbool.h \
+  ../../shared/defines.h client_commands.h
+
+/usr/include/unistd.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/stdio.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/ctype.h:
+
+/usr/include/_ctype.h:
+
+/usr/include/runetype.h:
+
+/usr/include/xlocale/_ctype.h:
+
+/usr/include/errno.h:
+
+../../shared/report.h:
+
+../../shared/sockets.h:
+
+../../config.h:
+
+../drivers.h:
+
+../drivers/lcd.h:
+
+/usr/include/stddef.h:
+
+../../shared/LL.h:
+
+../client.h:
+
+../screen.h:
+
+../render.h:
+
+../input.h:
+
+/usr/include/stdbool.h:
+
+../../shared/defines.h:
+
+client_commands.h:

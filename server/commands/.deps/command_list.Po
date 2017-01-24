@@ -1,0 +1,46 @@
+command_list.o: command_list.c /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_null.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  command_list.h ../client.h ../../shared/LL.h ../screen.h \
+  server_commands.h client_commands.h screen_commands.h \
+  widget_commands.h menu_commands.h
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+command_list.h:
+
+../client.h:
+
+../../shared/LL.h:
+
+../screen.h:
+
+server_commands.h:
+
+client_commands.h:
+
+screen_commands.h:
+
+widget_commands.h:
+
+menu_commands.h:

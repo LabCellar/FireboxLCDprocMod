@@ -1,0 +1,20 @@
+adv_bignum.o: adv_bignum.c lcd.h /usr/include/stddef.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_null.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h adv_bignum.h
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+adv_bignum.h:

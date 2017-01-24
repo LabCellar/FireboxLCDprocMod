@@ -1,0 +1,147 @@
+diff -Nuarp server/main.c server.SEG/main.c
+--- server/main.c	2006-01-26 19:47:59.000000000 -0800
++++ server.SEG/main.c	2006-02-21 09:14:08.000000000 -0800
+@@ -165,6 +165,31 @@
+ #define CHAIN(e,f) { if (e>=0) { e=(f); }}
+ #define CHAIN_END(e,msg) { if (e<0) { report(RPT_CRIT,(msg)); exit(e); }}
+ 
++#ifndef SEG //sigsegv handler for stackdump
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <execinfo.h>
++#include <signal.h>
++#include <time.h>
++#include <fcntl.h>
++#define STACKDUMP_FILENAME "/tmp/LCDdStackDump"
++
++#ifndef DWORD
++#define DWORD unsigned long
++#endif
++
++
++int InstallSigSegvHandler();
++void SigSegvHandler(int nSig, siginfo_t *pSigInfo, void *pAddr);
++unsigned GetFreeMem( unsigned long* pTotalMem, unsigned long* pUsedMem, unsigned long* pFreeMem, unsigned long* pBuffers, unsigned long* pCached );
++
++
++struct sigaction SigTerm;
++struct sigaction SigPipe;
++struct sigaction SigSegv;
++
++#endif /*SEG*/
+ 
+ int
+ main(int argc, char **argv)
+@@ -172,6 +197,10 @@
+ 	int e = 0;
+ 	pid_t parent_pid = 0;
+ 
++#ifndef SEG //sigsegv handler for stackdump
++    InstallSigSegvHandler();
++#endif /*SEG*/
++
+ 	stored_argc = argc;
+ 	stored_argv = argv;
+ 
+@@ -1036,3 +1065,100 @@
+ 	 * help message.
+ 	 */
+ }
++
++#ifndef SEG //sigsegv handler for stackdump
++int InstallSigSegvHandler()
++{
++    SigSegv.sa_sigaction = SigSegvHandler;
++    sigemptyset( &SigSegv.sa_mask );
++    SigSegv.sa_flags = SA_SIGINFO;
++
++    sigaddset (&SigSegv.sa_mask, SIGINT);
++    sigaddset (&SigSegv.sa_mask, SIGTSTP);
++    sigaddset (&SigSegv.sa_mask, SIGQUIT);
++    sigaddset (&SigSegv.sa_mask, SIGTERM);
++
++    return sigaction( SIGSEGV, &SigSegv, NULL);
++}
++
++void SigSegvHandler(int nSig, siginfo_t *pSigInfo, void *pAddr)
++{
++	void *array[50];
++  	size_t size;
++	char **strings;
++  	size_t i;
++
++	FILE*	fd = fopen( STACKDUMP_FILENAME, "w" );
++	DWORD	dwTotalMem, dwUsedMem, dwFreeMem, dwCached, dwBuffers, dwTotalFree;
++	time_t	now;
++	struct	tm	date_time;
++	now = time(NULL);
++	date_time = *localtime(&now);
++	fprintf( fd, "Dump Created : %s",asctime(&date_time));
++
++    dwTotalFree = GetFreeMem( &dwTotalMem, &dwUsedMem, &dwFreeMem, &dwBuffers, &dwCached );
++	fprintf( fd, "Free memory %lX ......\n", dwTotalFree );
++
++	if ( pSigInfo->si_signo == SIGSEGV )
++		 fprintf( fd, "Segmentation fault at Address %X ......\n", (unsigned)pSigInfo->si_addr );
++
++	switch( pSigInfo->si_code )
++	{
++		case SI_KERNEL:
++			 fprintf( fd, "Sent by Kernel at Address %X ......\n", (unsigned)pSigInfo->si_addr );
++			 break;
++
++		case SEGV_MAPERR:
++			 fprintf( fd, "Mapping Error at Address %X ......\n", (unsigned)pSigInfo->si_addr );
++			 break;
++
++		case SEGV_ACCERR:
++			 fprintf( fd, "Permisson Error at Address %X ......\n", (unsigned)pSigInfo->si_addr );
++			 break;
++	}
++
++	size = backtrace (array, 50);
++	strings = backtrace_symbols (array, size);
++
++	fprintf ( fd, "Obtained %d stack frames.\n", size);
++
++	for (i = 0; i < size; i++)
++    	 fprintf ( fd, "%s\n", strings[i]);
++
++	fclose( fd );
++  	free (strings);
++	signal (nSig, SIG_DFL);
++  	raise (nSig);
++}
++
++unsigned GetFreeMem( unsigned long* pTotalMem, unsigned long* pUsedMem, unsigned long* pFreeMem, unsigned long* pBuffers, unsigned long* pCached )
++{
++    char  buffer[1024];
++    long  garbage;
++    int	  nSize;
++    char* lpStr;
++    int	  fd = 0;
++
++    fd = open("/proc/meminfo", O_RDONLY );
++
++    if ( fd > 0 )
++    {
++	*pFreeMem = 0;
++	*pCached = 0;
++	*pBuffers = 0;
++	
++        nSize = read( fd, buffer, 1024 );
++	close( fd );
++
++	lpStr = strstr( buffer, "Mem:" );		
++	if ( lpStr )
++	    sscanf( lpStr, "Mem: %lu %lu %lu %lu %lu %lu\n", pTotalMem, pUsedMem, pFreeMem, &garbage, pBuffers, pCached);
++    }
++    else
++    {
++	return 0;
++    }
++
++    return (*pFreeMem+*pBuffers+*pCached);
++}
++#endif /*SEG*/

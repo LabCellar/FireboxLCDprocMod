@@ -1,0 +1,102 @@
+irtrans.o: irtrans.c ../../config.h /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_null.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/stdio.h /usr/include/unistd.h \
+  /usr/include/sys/types.h /usr/include/machine/endian.h \
+  /usr/include/x86/endian.h /usr/include/sys/_pthreadtypes.h \
+  /usr/include/sys/_stdint.h /usr/include/sys/select.h \
+  /usr/include/sys/_sigset.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/timespec.h /usr/include/sys/_timespec.h \
+  /usr/include/sys/unistd.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/time.h /usr/include/xlocale/_time.h /usr/include/netdb.h \
+  /usr/include/sys/socket.h /usr/include/sys/_iovec.h \
+  /usr/include/machine/_align.h /usr/include/x86/_align.h \
+  /usr/include/sys/_sockaddr_storage.h /usr/include/netinet/in.h \
+  /usr/include/netinet6/in6.h /usr/include/arpa/inet.h lcd.h \
+  /usr/include/stddef.h irtrans.h irtrans_remote.h irtrans_network.h \
+  irtrans_errcode.h report.h
+
+../../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/stdio.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/time.h:
+
+/usr/include/xlocale/_time.h:
+
+/usr/include/netdb.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/sys/_iovec.h:
+
+/usr/include/machine/_align.h:
+
+/usr/include/x86/_align.h:
+
+/usr/include/sys/_sockaddr_storage.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/netinet6/in6.h:
+
+/usr/include/arpa/inet.h:
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+irtrans.h:
+
+irtrans_remote.h:
+
+irtrans_network.h:
+
+irtrans_errcode.h:
+
+report.h:

@@ -1,0 +1,96 @@
+hd44780-hd44780-lis2.o: hd44780-lis2.c hd44780-lis2.h lcd.h \
+  /usr/include/stddef.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h hd44780-low.h \
+  ../../config.h /usr/include/sys/time.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/types.h /usr/include/machine/endian.h \
+  /usr/include/x86/endian.h /usr/include/sys/_pthreadtypes.h \
+  /usr/include/sys/_stdint.h /usr/include/sys/select.h \
+  /usr/include/sys/_sigset.h /usr/include/sys/timespec.h \
+  /usr/include/sys/_timespec.h /usr/include/time.h \
+  /usr/include/xlocale/_time.h report.h /usr/include/stdlib.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/xlocale/_strings.h \
+  /usr/include/xlocale/_string.h /usr/include/stdio.h \
+  /usr/include/fcntl.h /usr/include/termios.h \
+  /usr/include/sys/_termios.h /usr/include/sys/ttycom.h \
+  /usr/include/sys/ioccom.h /usr/include/sys/ttydefaults.h \
+  /usr/include/errno.h
+
+hd44780-lis2.h:
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+hd44780-low.h:
+
+../../config.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/time.h:
+
+/usr/include/xlocale/_time.h:
+
+report.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/stdio.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/termios.h:
+
+/usr/include/sys/_termios.h:
+
+/usr/include/sys/ttycom.h:
+
+/usr/include/sys/ioccom.h:
+
+/usr/include/sys/ttydefaults.h:
+
+/usr/include/errno.h:

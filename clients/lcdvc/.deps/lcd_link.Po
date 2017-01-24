@@ -1,0 +1,90 @@
+lcd_link.o: lcd_link.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/unistd.h /usr/include/sys/types.h \
+  /usr/include/machine/endian.h /usr/include/x86/endian.h \
+  /usr/include/sys/_pthreadtypes.h /usr/include/sys/_stdint.h \
+  /usr/include/sys/select.h /usr/include/sys/_sigset.h \
+  /usr/include/sys/_timeval.h /usr/include/sys/timespec.h \
+  /usr/include/sys/_timespec.h /usr/include/sys/unistd.h \
+  /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/sys/stat.h /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/xlocale/_time.h /usr/include/fcntl.h /usr/include/errno.h \
+  /usr/include/stdlib.h lcd_link.h vc_link.h lcdvc.h \
+  ../../shared/defines.h ../../shared/report.h ../../shared/str.h \
+  ../../shared/sockets.h ../../config.h
+
+/usr/include/stdio.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/xlocale/_time.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/errno.h:
+
+/usr/include/stdlib.h:
+
+lcd_link.h:
+
+vc_link.h:
+
+lcdvc.h:
+
+../../shared/defines.h:
+
+../../shared/report.h:
+
+../../shared/str.h:
+
+../../shared/sockets.h:
+
+../../config.h:

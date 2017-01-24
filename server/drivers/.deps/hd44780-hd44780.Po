@@ -1,0 +1,116 @@
+hd44780-hd44780.o: hd44780.c /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_null.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/stdio.h /usr/include/unistd.h \
+  /usr/include/sys/types.h /usr/include/machine/endian.h \
+  /usr/include/x86/endian.h /usr/include/sys/_pthreadtypes.h \
+  /usr/include/sys/_stdint.h /usr/include/sys/select.h \
+  /usr/include/sys/_sigset.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/timespec.h /usr/include/sys/_timespec.h \
+  /usr/include/sys/unistd.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/errno.h ../../config.h lcd.h /usr/include/stddef.h \
+  lcd_lib.h hd44780.h report.h adv_bignum.h timing.h \
+  /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/xlocale/_time.h /usr/include/sched.h hd44780-low.h \
+  hd44780-drivers.h hd44780-4bit.h hd44780-ext8bit.h hd44780-serialLpt.h \
+  hd44780-winamp.h hd44780-serial.h hd44780-lis2.h hd44780-i2c.h \
+  hd44780-piplate.h hd44780-ethlcd.h hd44780-usblcd.h hd44780-charmap.h
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/stdio.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/x86/endian.h:
+
+/usr/include/sys/_pthreadtypes.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_sigset.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/errno.h:
+
+../../config.h:
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+lcd_lib.h:
+
+hd44780.h:
+
+report.h:
+
+adv_bignum.h:
+
+timing.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/xlocale/_time.h:
+
+/usr/include/sched.h:
+
+hd44780-low.h:
+
+hd44780-drivers.h:
+
+hd44780-4bit.h:
+
+hd44780-ext8bit.h:
+
+hd44780-serialLpt.h:
+
+hd44780-winamp.h:
+
+hd44780-serial.h:
+
+hd44780-lis2.h:
+
+hd44780-i2c.h:
+
+hd44780-piplate.h:
+
+hd44780-ethlcd.h:
+
+hd44780-usblcd.h:
+
+hd44780-charmap.h:

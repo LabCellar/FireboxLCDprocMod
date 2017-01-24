@@ -1,0 +1,1 @@
+machine_NetBSD.o: machine_NetBSD.c

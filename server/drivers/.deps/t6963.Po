@@ -1,0 +1,47 @@
+t6963.o: t6963.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/stdio.h /usr/include/string.h /usr/include/strings.h \
+  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
+  /usr/include/errno.h ../../config.h lcd.h /usr/include/stddef.h \
+  t6963.h glcd_font5x8.h report.h lcd_lib.h t6963_low.h
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/stdio.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+/usr/include/errno.h:
+
+../../config.h:
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+t6963.h:
+
+glcd_font5x8.h:
+
+report.h:
+
+lcd_lib.h:
+
+t6963_low.h:

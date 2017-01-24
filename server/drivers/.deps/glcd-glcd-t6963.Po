@@ -1,0 +1,41 @@
+glcd-glcd-t6963.o: glcd-t6963.c ../../config.h /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_null.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/errno.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/xlocale/_strings.h \
+  /usr/include/xlocale/_string.h lcd.h /usr/include/stddef.h report.h \
+  glcd-low.h t6963_low.h
+
+../../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/errno.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/xlocale/_strings.h:
+
+/usr/include/xlocale/_string.h:
+
+lcd.h:
+
+/usr/include/stddef.h:
+
+report.h:
+
+glcd-low.h:
+
+t6963_low.h:

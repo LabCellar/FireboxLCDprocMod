@@ -1,0 +1,42 @@
+screenlist.o: screenlist.c /usr/include/stdlib.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_null.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/x86/_types.h \
+  /usr/include/stdio.h ../shared/LL.h ../shared/sockets.h ../config.h \
+  ../shared/report.h client.h screen.h widget.h screenlist.h \
+  /usr/include/stdbool.h ../shared/defines.h main.h
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_null.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/x86/_types.h:
+
+/usr/include/stdio.h:
+
+../shared/LL.h:
+
+../shared/sockets.h:
+
+../config.h:
+
+../shared/report.h:
+
+client.h:
+
+screen.h:
+
+widget.h:
+
+screenlist.h:
+
+/usr/include/stdbool.h:
+
+../shared/defines.h:
+
+main.h:

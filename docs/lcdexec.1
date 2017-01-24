@@ -1,0 +1,241 @@
+.TH lcdexec 1 "24 March 2011" LCDproc "LCDproc suite"
+.SH NAME
+lcdexec - LCDproc client to execute commands from the LCDd menu
+.SH SYNOPSIS
+.B lcdexec
+[\fB\-hf\fP]
+[\fB\-c\fP \fIconfig\fP]
+[\fB\-a\fP \fIaddr\fP]
+[\fB\-p\fP \fIport\fP]
+[\fB\-r\fP \fIlevel\fP]
+[\fB\-s\fP \fIbool\fP]
+
+.SH DESCRIPTION
+lcdexec connects to LCDd (the LCDproc server) and adds a submenu to the LCDd main menu
+that allows the user to select commands to be executed.
+You can access the menu by pressing the menu key configured for LCDd.
+
+.SH OPTIONS
+.I lcdexec
+understands the following command line options., that override the
+corresponding options given in the configuration file:
+.TP 8
+.B \-c \fIfilename\fP
+Set the name of the config file to read, /etc/lcdexec.conf by default
+.TP 8
+.B \-a \fIaddress\fP
+Set the address of the host which LCDd is running on, localhost by default
+.TP 8
+.B \-p \fIport\fP
+Set the port which LCDd is accepting connections on, 13666 by default
+.TP 8
+.B \-f
+Run in foreground.
+.TP 8
+.B \-r \fIlevel\fP
+Set the reporting level to \fIlevel\fP, which is an integer
+representing the reporting levels from 0 (critical errors only) to 5 (debug messages).
+Default is 2 (errors and warnings only)
+.TP 8
+.B \-s \fIbool\fP
+Report to syslog (1) or to stdout (0, default)
+.PP
+
+.SH USAGE
+In addition to the command line options listed above lcdexec also takes options from
+a configuration file.
+.PP
+This file is expected to have a "INI-file" like format with sections introduced by
+section headers in square brackets and options lines consisting of key=value pairs.
+.PP
+Section and option names may contain only characters from the range [a-zA-Z0-9_],
+while value strings may contain any printable character.
+Value strings with characters outside the range [a-zA-Z0-9_] must be quoted with double quotes.
+To get a double quote or backslashes in the string, they must be escaped by preceding it by a backslash.
+.PP
+
+The lcdexec configuration file needs at least two sections:
+.TP 8
+.B [lcdexec]
+for the general options
+.TP 8
+.B [MainMenu]
+for the top level of the menu hierarchy to be displayed.
+.PP
+
+The \fB[lcdexec]\fP section supports the following options:
+.TP 8
+.B Address=\fIserver\fP
+The host name or IP address of the LCDd server to connect to.
+If not given, \fIserver\fP defaults to localhost.
+.TP 8
+.B Port=\fIport\fP
+Port of the server to connect to.
+The default value for \fIport\fP is 13666, the LCDproc port.
+.TP 8
+.B ReportLevel=\fIlevel\fP
+Set the reporting level to \fIlevel\fP, which is an integer
+representing the reporting levels from 0 (critical errors only) to 5 (debug messages).
+Default is 2 (errors and warnings only)
+.TP 8
+.B ReportToSyslog=\fIbool\fP
+Tell whether to report to syslog (TRUE) or to stderr (FALSE).
+.TP 8
+.B Foreground=\fIbool\fP
+Tell whether to run in foreground (TRUE) or in background (FALSE).
+If not given, the default is FALSE for daemon mode.
+.TP 8
+.B DisplayName=\fIDisplay\fP
+Set the display name for the main menu.
+If not given it defaults to \fBlcdexec\fP \fIHOST\fP, where \fIHOST\fP
+is the hostname of the system \fIlcdexec\fP is running on.
+.TP 8
+.B Shell=\fI/path/to/shell\fP
+Set the shell to use when executing programs.
+If not given, \fBlcdexec\fP tries to read the environment variable \fISHELL\fP.
+If that fails, it defaults to \fB/bin/sh\fP.
+Please note that the shell given here must understand the option \fB\-c\fP
+followed by the command line to execute.
+.PP
+
+The \fB[MainMenu]\fP section and the sections it refers to define the menu hierarchy
+to be displayed.
+Each menu and each menu entry in the menu hierarchy is defined as its own section.
+Whether a given section is a sub-menu or a command entry is defined by the
+option keys occurring in the section.
+.PP
+Menu / menu entry sections may contain the following options:
+.TP 8
+.B Entry=\fIentry\fP
+Defines a menu entry \fIentry\fP which is further specified in the section \fB[\fP\fIentry\fP\fB]\fP.
+
+Sections containing one or more \fBEntry=\fP options are menus.
+.TP 8
+.B Exec=\fIcommand\fP
+Defines the system command \fIcommand\fP to be executed when this entry gets selected.
+
+Sections containing an \fBExec=\fP option are command entries.
+.TP 8
+.B DisplayName=\fIname\fP
+The name of the menu entry to be displayed on the LCD.
+If this option is not given, the the section header name is used (without the square brackets).
+.TP 8
+.B Feedback=\fIbool\fP
+In command entries, this option tells whether to inform the user of the completion of
+commands using an alert screen on the display.
+If not given, it defaults to \fBno\fB.
+.PP
+
+.SH FILES
+.TP
+.B lcdexec.conf
+
+.SH EXAMPLES
+In the configfile:
+.PP
+.DS
+.ft CW
+.nf
+## general options for lcdexec ##
+[lcdexec]
+# address of the LCDd server to connect to
+Address=localhost
+
+# Port of the server to connect to
+Port=13666
+
+# set reporting level
+ReportLevel=2
+
+# report to to syslog ?
+ReportToSyslog=false
+
+# run in foreground [default: false; legal: true, false]
+Foreground=false
+
+# display name for the main menu [default: lcdexec HOST]
+#DisplayName=lcdexec
+
+
+# main menu definition
+[MainMenu]
+# the Entry=... lines (one for each menu entry) tell it is a menu definition
+Entry=EjectCD
+Entry=ShutdownMenu
+
+# definition of a command
+[EjectCD]
+# name to display in the menu instead of the section name
+DisplayName="Eject CD-ROM"
+# the Exec=... line tells that it is a command
+Exec="umount /cdrom; cdeject"
+
+# definition of a menu
+[ShutdownMenu]
+DisplayName="Shutdown menu"
+# a menu contains an Entry=... line for each menu entry
+Entry=Shutdown5min
+Entry=Reboot5min
+Entry=CancelShutdown
+Entry=ShutdownNow
+Entry=RebootNow
+
+[Shutdown5min]
+DisplayName="Shutdown in 5 minutes"
+Exec="shutdown \-h +5"
+Feedback=yes
+
+[Reboot5min]
+DisplayName="Reboot in 5 minutes"
+Exec="shutdown \-r +5"
+Feedback=yes
+
+[CanclShutdown]
+DisplayName="Cancel shutdown/reboot"
+Exec="shutdown \-c"
+Feedback=yes
+
+[ShutdownNow]
+DisplayName="Shutdown now"
+Exec="shutdown \-h now"
+
+[RebootNow]
+DisplayName="Reboot now"
+Exec="shutdown \-r now"
+.ft R
+.fi
+.DE
+
+.PP
+Start lcdexec with:
+lcdexec \-c /usr/local/etc/lcdexec.conf
+
+.PP
+This will allow you to eject the CD-ROM by opening the LCDd menu, selecting "lcdexec"
+and selecting "Eject CD-ROM".
+Further it allows you to do various shutdowns, among others the "Shutdown in 5 minutes"
+by opening the LCDd menu, selecting "lcdexec", selecting "Shutdown menu"
+and selecting "Shutdown in 5 minutes".
+
+.SH SEE ALSO
+LCDd(8)
+
+.SH AUTHOR
+lcdexec is written by Joris Robijn and Peter Marschall. It is part of the LCDproc suite.
+
+The newest version of LCDproc should be available from here:
+
+		http://www.lcdproc.org/
+
+.SH LEGAL STUFF
+LCDproc is released as "WorksForMe-Ware".  In other words, it is free, kinda neat,
+and we don't guarantee that it will do anything in particular on any machine
+except the ones it was developed on.
+.PP
+It is technically released under the GNU GPL license (you should have received the file,
+"COPYING", with LCDproc) (also, look on http://www.fsf.org/ for more information),
+so you can distribute and use it for free -- but you must make the source code
+freely available to anyone who wants it.
+.PP
+For any sort of real legal information, read the GNU GPL (GNU General Public License).
+It's worth reading.
