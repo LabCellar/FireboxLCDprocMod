@@ -15,7 +15,7 @@ These instructions suppose you already have a working LCDproc installation. If n
  ```bash
  mv /usr/local/lib/lcdproc/sdeclcd.so /usr/local/lib/lcdproc/sdeclcd.so.bak
  ```
- * Download the patched sdec driver ([our builds are available here](https://github.com/LabCellar/FireboxLCDprocMod/releases)) and copy it to `/usr/local/lib/lcdproc/)))`
+ * Download the patched sdec driver ([our builds are available here](https://github.com/LabCellar/FireboxLCDprocMod/releases)) and copy it to `/usr/local/lib/lcdproc/`
  * Start LCDproc service
  * Enjoy !
 
