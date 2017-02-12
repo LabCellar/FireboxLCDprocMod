@@ -2,7 +2,7 @@
 
 The original Firebox X-Core LCD had limited backlight life. So when these boxes were supported by LCDproc, the driver author did implement some bakclight auto-cutoff. Things have changed, and today Fireboxes are more reliable. So it's time to remove this backlight auto-cutoff.
 
-We've tested this modification on 3 Firebox XTM-5 so far, but it should work on other models (even older ones). Feel free to leave an issue with your feedback ;)
+We've tested this modification on 3 Firebox XTM-5 so far, but it should work on other models (even older ones). Also got some [positive feedback on x550e](https://forum.pfsense.org/index.php?topic=7920.msg692860#msg692860). Feel free to leave an issue with your feedback ;)
 
 This driver is based on LCDproc's sources, therefore we also distribute it under GPLv2.
 
